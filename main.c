@@ -1,15 +1,10 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
+#include "player.h"
 
 bool running;
 const int FPS = 60;
 const int frameDelay = 1000 / FPS; // 1000 ms / 60 ≈ 16.67 ms
-
-#define startingPositionX 80
-#define startingPositionY 40
-
-int x = startingPositionX;
-int y = startingPositionY;
 
 int main(int argc, char **argv)
 {
@@ -31,8 +26,9 @@ int main(int argc, char **argv)
 
 	running = true;
 
-	const bool *state = SDL_GetKeyboardState(NULL);
-		
+	struct Player player;
+	InitPlayer(&player);
+
 	while(running)
 	{
 		Uint32 frameStart = SDL_GetTicks();  // start time of frame
@@ -44,25 +40,9 @@ int main(int argc, char **argv)
 			{
 				running = false;
 			}
-
-			if(event.type == SDL_EVENT_KEY_DOWN)
-			{
-				if(event.key.key == SDLK_ESCAPE)
-				{
-					running = false;
-				}
-
-				if(event.key.key == SDLK_SPACE)
-				{
-					SDL_Log("Jump!");
-				}
-			}
 		}
 
-		if(state[SDL_SCANCODE_W]) y -= 10;
-		if(state[SDL_SCANCODE_S]) y += 10;
-		if(state[SDL_SCANCODE_A]) x -= 10;
-		if(state[SDL_SCANCODE_D]) x += 10;
+		UpdatePlayer(&player);
 
 		//----CLEAR----
 		SDL_SetRenderDrawColor(renderer, 0, 0, 50, 255);
@@ -70,7 +50,7 @@ int main(int argc, char **argv)
 
 		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
-		SDL_FRect rect = { x, y, 100, 100 };
+		SDL_FRect rect = { player.x, player.y, 100, 100 };
 		SDL_RenderFillRect(renderer, &rect);
 
 		//----PRESENT----
