@@ -1,6 +1,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include "player.h"
+#include "./utility/linear_algebra/linear_algebra.h"
 
 bool running;
 const int FPS = 60;
@@ -26,8 +27,8 @@ int main(int argc, char **argv)
 
 	running = true;
 
-	struct Player player;
-	InitPlayer(&player);
+	Mat3 matrix;
+	mat3_identity(&matrix);
 
 	while(running)
 	{
@@ -41,17 +42,20 @@ int main(int argc, char **argv)
 				running = false;
 			}
 		}
-
-		UpdatePlayer(&player);
+	
+		char buffer[256];	
+		mat3_to_string(&matrix, buffer, sizeof(buffer));	
+		
+		SDL_Log("Matrix:\n%s", buffer);
 
 		//----CLEAR----
 		SDL_SetRenderDrawColor(renderer, 0, 0, 50, 255);
 		SDL_RenderClear(renderer);
 
-		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+		//SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
-		SDL_FRect rect = { player.x, player.y, 100, 100 };
-		SDL_RenderFillRect(renderer, &rect);
+		//SDL_FRect rect = { player.x, player.y, 100, 100 };
+		//SDL_RenderFillRect(renderer, &rect);
 
 		//----PRESENT----
 		SDL_RenderPresent(renderer);
