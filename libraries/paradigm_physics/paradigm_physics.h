@@ -1,5 +1,5 @@
-#ifndef PHYSICS_H
-#define PHYSICS_H
+#ifndef PARADIGM_PHYSICS_H
+#define PARADIGM_PHYSICS_H
 #include "./utility/linear_algebra/linear_algebra.h"
 
 typedef struct
@@ -13,4 +13,4 @@ typedef struct
 void physics_init(physics_context* ctx, Vec2* entity_position_array, int max_entities);
 void update_physics();
 
-#endif //PHYSICS_H
+#endif //PARADIGM_PHYSICS_H
