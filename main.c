@@ -2,6 +2,7 @@
 #include <SDL3/SDL_main.h>
 #include "player.h"
 #include "./utility/linear_algebra/linear_algebra.h"
+#include "libraries/paradigm_physics/paradigm_physics.h"
 
 bool running;
 const int FPS = 60;
@@ -27,8 +28,10 @@ int main(int argc, char **argv)
 
 	running = true;
 
-	Mat3 matrix;
-	mat3_identity(&matrix);
+	//Mat3 matrix;
+	//mat3_identity(&matrix);
+	PhysicsContext* ctx = physics_init(40);
+
 
 	while(running)
 	{
@@ -43,16 +46,43 @@ int main(int argc, char **argv)
 			}
 		}
 	
-		char buffer[256];	
-		mat3_to_string(&matrix, buffer, sizeof(buffer));	
+		//char buffer[256];	
+		//mat3_to_string(&matrix, buffer, sizeof(buffer));	
 		
-		SDL_Log("Matrix:\n%s", buffer);
+		//SDL_Log("Matrix:\n%s", buffer);
+	
+
+		for(int i = 0; i < ctx->count; i++)
+		{
+			char buffer[256];
+
+			snprintf(buffer, sizeof(buffer), "Entity %i:\n", i);
+			SDL_Log("%s", buffer);
+
+			snprintf(buffer, sizeof(buffer), "\tX: %f\n", ctx->x[i]);
+			SDL_Log("%s", buffer);
+			
+			snprintf(buffer, sizeof(buffer), "\tY: %f\n", ctx->y[i]);
+			SDL_Log("%s", buffer);
+			
+			snprintf(buffer, sizeof(buffer), "\tVX: %f\n", ctx->vx[i]);
+			SDL_Log("%s", buffer);
+			
+			snprintf(buffer, sizeof(buffer), "\tVY: %f\n", ctx->vy[i]);
+			SDL_Log("%s", buffer);
+			
+			snprintf(buffer, sizeof(buffer), "\tFX: %f\n", ctx->fx[i]);
+			SDL_Log("%s", buffer);
+			
+			snprintf(buffer, sizeof(buffer), "\tFY: %f\n", ctx->fy[i]);
+			SDL_Log("%s", buffer);
+		}
 
 		//----CLEAR----
 		SDL_SetRenderDrawColor(renderer, 0, 0, 50, 255);
 		SDL_RenderClear(renderer);
 
-		//SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 
 		//SDL_FRect rect = { player.x, player.y, 100, 100 };
 		//SDL_RenderFillRect(renderer, &rect);

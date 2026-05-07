@@ -1,16 +1,25 @@
 #ifndef PARADIGM_PHYSICS_H
 #define PARADIGM_PHYSICS_H
-#include "./utility/linear_algebra/linear_algebra.h"
+#include "../../utility/linear_algebra/linear_algebra.h"
+#include <stdint.h>
+#include <stdlib.h>
 
 typedef struct
 {
-	Vec2* positions;
-	Vec2 velocities[1000];
-	int capacity;
-	int active_count;
-} physics_context;
+	uint32_t count;
+	float* x;
+	float* y;
+	float* vx;
+	float* vy;
+	float* fx;
+	float* fy;
+	uint8_t* state;
+	uint32_t* mass;
+	void* blob_start;
+} PhysicsContext;
 
-void physics_init(physics_context* ctx, Vec2* entity_position_array, int max_entities);
-void update_physics();
+PhysicsContext* physics_init(const uint32_t count);
+
+void update_physics(PhysicsContext* ctx);
 
 #endif //PARADIGM_PHYSICS_H
