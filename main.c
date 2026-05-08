@@ -50,6 +50,10 @@ int main(int argc, char **argv)
 		//mat3_to_string(&matrix, buffer, sizeof(buffer));	
 		
 		//SDL_Log("Matrix:\n%s", buffer);
+
+		ctx->force_x_array[39] = 20;
+	
+		update_physics(ctx, 1.0f/60.0f);
 	
 
 		for(int i = 0; i < ctx->count; i++)
@@ -59,22 +63,22 @@ int main(int argc, char **argv)
 			snprintf(buffer, sizeof(buffer), "Entity %i:\n", i);
 			SDL_Log("%s", buffer);
 
-			snprintf(buffer, sizeof(buffer), "\tX: %f\n", ctx->x[i]);
+			snprintf(buffer, sizeof(buffer), "\tX: %f\n", ctx->x_array[i]);
 			SDL_Log("%s", buffer);
 			
-			snprintf(buffer, sizeof(buffer), "\tY: %f\n", ctx->y[i]);
+			snprintf(buffer, sizeof(buffer), "\tY: %f\n", ctx->y_array[i]);
 			SDL_Log("%s", buffer);
 			
-			snprintf(buffer, sizeof(buffer), "\tVX: %f\n", ctx->vx[i]);
+			snprintf(buffer, sizeof(buffer), "\tVX: %f\n", ctx->velocity_x_array[i]);
 			SDL_Log("%s", buffer);
 			
-			snprintf(buffer, sizeof(buffer), "\tVY: %f\n", ctx->vy[i]);
+			snprintf(buffer, sizeof(buffer), "\tVY: %f\n", ctx->velocity_y_array[i]);
 			SDL_Log("%s", buffer);
 			
-			snprintf(buffer, sizeof(buffer), "\tFX: %f\n", ctx->fx[i]);
+			snprintf(buffer, sizeof(buffer), "\tFX: %f\n", ctx->force_x_array[i]);
 			SDL_Log("%s", buffer);
 			
-			snprintf(buffer, sizeof(buffer), "\tFY: %f\n", ctx->fy[i]);
+			snprintf(buffer, sizeof(buffer), "\tFY: %f\n", ctx->force_y_array[i]);
 			SDL_Log("%s", buffer);
 		}
 
