@@ -1,0 +1,27 @@
+external/SDL3/CMakeFiles/SDL3-static.dir/src/render/software/SDL_render_sw.c.o: \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_render_sw.c \
+ /usr/include/stdc-predef.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/SDL_internal.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../SDL_sysrender.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_surface_c.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_blit.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../SDL_yuv_sw_c.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_render_sw_c.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_draw.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_surface_c.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_blendfillrect.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_blendline.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_blendpoint.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_drawline.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_drawpoint.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/SDL_triangle.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_pixels_c.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_rotate.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_sysvideo.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_vulkan.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_stdinc.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_error.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_video.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_begin_code.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_close_code.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/render/software/../../video/SDL_surface_c.h

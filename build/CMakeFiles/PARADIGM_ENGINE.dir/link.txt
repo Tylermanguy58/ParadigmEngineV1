@@ -1,0 +1,1 @@
+/usr/bin/c++ -pthread CMakeFiles/PARADIGM_ENGINE.dir/src/main.cpp.o -o PARADIGM_ENGINE  internal/libparadigm_physics.a internal/liblinear_algebra.a external/SDL3/libSDL3.a -lm 

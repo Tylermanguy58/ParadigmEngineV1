@@ -1,0 +1,9 @@
+/home/tyler/projects/ParadigmBlockEngine/build/CMakeFiles/paradigm_physics.dir
+/home/tyler/projects/ParadigmBlockEngine/build/CMakeFiles/linear_algebra.dir
+/home/tyler/projects/ParadigmBlockEngine/build/CMakeFiles/PARADIGM_ENGINE.dir
+/home/tyler/projects/ParadigmBlockEngine/build/CMakeFiles/edit_cache.dir
+/home/tyler/projects/ParadigmBlockEngine/build/CMakeFiles/rebuild_cache.dir
+/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/CMakeFiles/SDL3-static.dir
+/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/CMakeFiles/SDL3_test.dir
+/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/CMakeFiles/edit_cache.dir
+/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/CMakeFiles/rebuild_cache.dir

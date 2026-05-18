@@ -1,0 +1,19 @@
+external/SDL3/CMakeFiles/SDL3-static.dir/src/gpu/xr/SDL_openxrdyn.c.o: \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/SDL_openxrdyn.c \
+ /usr/include/stdc-predef.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/SDL_internal.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/SDL_openxrdyn.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/SDL_openxr_internal.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/../../video/khronos/openxr/openxr.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/../../video/khronos/openxr/openxr_platform_defines.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/../../video/khronos/openxr/openxr_platform.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/../../video/khronos/openxr/openxr.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/src/gpu/xr/SDL_openxrsym.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_dlopennote.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_openxr.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_stdinc.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_gpu.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_begin_code.h \
+ /home/tyler/projects/ParadigmBlockEngine/external/SDL3/include/SDL3/SDL_close_code.h

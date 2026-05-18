@@ -1,0 +1,2 @@
+/usr/bin/ar qc internal/libparadigm_physics.a CMakeFiles/paradigm_physics.dir/internal/paradigm_physics/src/paradigm_physics.cpp.o
+/usr/bin/ranlib internal/libparadigm_physics.a
