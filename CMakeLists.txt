@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.28.3)
 project(PARADIGM_ENGINE CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SDL_SHARED OFF CACHE BOOL "Build shared library" FORCE)
@@ -9,7 +9,8 @@ set(SDL_STATIC ON CACHE BOOL "Build static library" FORCE)
 
 add_subdirectory(external/SDL3)
 
-
+add_library(entt INTERFACE)
+target_include_directories(entt INTERFACE external/entt/src)
 
 #internal libraries
 
@@ -30,4 +31,5 @@ target_link_libraries(${PROJECT_NAME}
 		paradigm_physics
 		linear_algebra
 		SDL3-static
+		entt
 )

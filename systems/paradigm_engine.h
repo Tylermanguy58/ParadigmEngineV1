@@ -1,4 +1,0 @@
-#ifndef PARADIGM_ENGINE_H
-#define PARADIGM_ENGINE_H
-
-#endif //PARADIGM_ENGINE_H

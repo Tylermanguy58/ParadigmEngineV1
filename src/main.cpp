@@ -2,7 +2,9 @@
 #include <SDL3/SDL_main.h>
 #include <paradigm_physics.h>
 #include <linear_algebra.h>
+#include <iostream>
 #include <cstdio>
+#include <entt/entt.hpp>
 
 bool running;
 const int FPS = 60;
@@ -15,7 +17,6 @@ int main(int argc, char **argv)
 		SDL_Log("SDL_Init failed: %s", SDL_GetError());
 		return -1;
 	}
-		
 
 	SDL_Window* window = nullptr;
 	SDL_Renderer *renderer = nullptr;
@@ -29,69 +30,30 @@ int main(int argc, char **argv)
 
 	running = true;
 
-	Mat3 matrix;
-	mat3_identity(&matrix);
-	PhysicsContext* ctx = physics_init(40);
-
-
-	while(running)
+	while(running) //main game loop
 	{
 		Uint32 frameStart = SDL_GetTicks();  // start time of frame
 
+		//----POLL----
 		SDL_Event event;
 		while(SDL_PollEvent(&event))
 		{
+			//exit loop if quit event
 			if(event.type == SDL_EVENT_QUIT)	
 			{
 				running = false;
 			}
 		}
 	
-		char buffer[256];	
-		mat3_to_string(&matrix, buffer, sizeof(buffer));	
-		
-		SDL_Log("Matrix:\n%s", buffer);
-
-		//ctx->force_x_array[39] = 20;
-	
-		//update_physics(ctx, 1.0f/60.0f);
-
-		/*for(int i = 0; i < ctx->count; i++)
-		{
-			snprintf(buffer, sizeof(buffer), "Entity %i:\n", i);
-			SDL_Log("%s", buffer);
-
-			snprintf(buffer, sizeof(buffer), "\tX: %f\n", ctx->x_array[i]);
-			SDL_Log("%s", buffer);
-			
-			snprintf(buffer, sizeof(buffer), "\tY: %f\n", ctx->y_array[i]);
-			SDL_Log("%s", buffer);
-			
-			snprintf(buffer, sizeof(buffer), "\tVX: %f\n", ctx->velocity_x_array[i]);
-			SDL_Log("%s", buffer);
-			
-			snprintf(buffer, sizeof(buffer), "\tVY: %f\n", ctx->velocity_y_array[i]);
-			SDL_Log("%s", buffer);
-			
-			snprintf(buffer, sizeof(buffer), "\tFX: %f\n", ctx->force_x_array[i]);
-			SDL_Log("%s", buffer);
-			
-			snprintf(buffer, sizeof(buffer), "\tFY: %f\n", ctx->force_y_array[i]);
-			SDL_Log("%s", buffer);
-		}*/
-
 		//----CLEAR----
 		SDL_SetRenderDrawColor(renderer, 0, 0, 50, 255);
 		SDL_RenderClear(renderer);
-
 		SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-
-		//SDL_FRect rect = { player.x, player.y, 100, 100 };
-		//SDL_RenderFillRect(renderer, &rect);
 
 		//----PRESENT----
 		SDL_RenderPresent(renderer);
 
+		//----DELTA TIME----
  		Uint32 frameTime = SDL_GetTicks() - frameStart; //get delta time
 
 		if (frameTime < frameDelay) 

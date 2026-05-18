@@ -81,8 +81,8 @@ PhysicsContext* physics_init(const uint32_t count)
 
 void physics_apply_force(PhysicsContext* ctx, int handle, float fx, float fy)
 {
-	ctx->force_x_array[handle] = fx; 
-	ctx->force_y_array[handle] = fy;
+	ctx->force_x_array[handle] += fx; 
+	ctx->force_y_array[handle] += fy;
 }
 
 void update_physics(PhysicsContext* ctx, float delta_time)

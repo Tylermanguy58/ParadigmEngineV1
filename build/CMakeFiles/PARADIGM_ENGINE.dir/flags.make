@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/tyler/projects/ParadigmBlockEngine/internal/paradigm_physics/include -I/home/tyler/projects/ParadigmBlockEngine/internal/linear_algebra/include -I/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/include-revision -I/home/tyler/projects/ParadigmBlockEngine/external/SDL3/include
+CXX_INCLUDES = -I/home/tyler/projects/ParadigmBlockEngine/internal/paradigm_physics/include -I/home/tyler/projects/ParadigmBlockEngine/internal/linear_algebra/include -I/home/tyler/projects/ParadigmBlockEngine/build/external/SDL3/include-revision -I/home/tyler/projects/ParadigmBlockEngine/external/SDL3/include -I/home/tyler/projects/ParadigmBlockEngine/external/entt/src
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGS = -std=gnu++20
 
